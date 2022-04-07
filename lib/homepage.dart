@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:school/homework.dart';
-
+import 'package:school/result.dart';
 
 class homepage extends StatefulWidget {
   homepage({Key? key}) : super(key: key);
@@ -82,7 +82,8 @@ class _homepageState extends State<homepage> {
                   width: 125,
                   child: ElevatedButton(
                     onPressed: () {
-                   
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => result()));
                     },
                     child: Text('Test',
                         style: GoogleFonts.roboto(
@@ -100,8 +101,9 @@ class _homepageState extends State<homepage> {
                   width: 125,
                   child: ElevatedButton(
                     onPressed: () {
-                   
-                     },
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: ((context) => result())));
+                    },
                     child: Text('Result',
                         style: GoogleFonts.roboto(
                             color: Colors.black,
@@ -117,9 +119,7 @@ class _homepageState extends State<homepage> {
                   height: 45,
                   width: 125,
                   child: ElevatedButton(
-                    onPressed: () {
-                     
-                    },
+                    onPressed: () {},
                     child: Text('TimeTable',
                         style: GoogleFonts.roboto(
                             color: Colors.black,
@@ -135,9 +135,7 @@ class _homepageState extends State<homepage> {
                   height: 45,
                   width: 125,
                   child: ElevatedButton(
-                    onPressed: () {
-                     
-                    },
+                    onPressed: () {},
                     child: Text('Chat',
                         style: GoogleFonts.roboto(
                             color: Colors.black,
