@@ -2,9 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:school/addstudent.dart';
+import 'package:school/chat.dart';
 
 import 'package:school/homework.dart';
 import 'package:school/result.dart';
+import 'package:school/timetable.dart';
 
 class homepage extends StatefulWidget {
   homepage({Key? key}) : super(key: key);
@@ -36,25 +39,43 @@ class _homepageState extends State<homepage> {
                         fontWeight: FontWeight.w400))),
             Align(
                 alignment: FractionalOffset(0.1, 0.2),
-                child: Text('STUDENTS',
-                    style: GoogleFonts.roboto(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w300))),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => addstudent()));
+                  },
+                  child: Text('STUDENTS',
+                      style: GoogleFonts.roboto(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w300)),
+                )),
             Align(
                 alignment: FractionalOffset(0.5, 0.2),
-                child: Text('ATTENDANCE',
-                    style: GoogleFonts.roboto(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w300))),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: ((context) => homepage())));
+                  },
+                  child: Text('ATTENDENCE',
+                      style: GoogleFonts.roboto(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w300)),
+                )),
             Align(
                 alignment: FractionalOffset(0.9, 0.2),
-                child: Text('ACTIVITIES',
-                    style: GoogleFonts.roboto(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w300))),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: ((context) => homepage())));
+                  },
+                  child: Text('ACTIVITES',
+                      style: GoogleFonts.roboto(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w300)),
+                )),
             Align(
                 alignment: FractionalOffset(0.1, 0.3),
                 child: SizedBox(
@@ -119,7 +140,12 @@ class _homepageState extends State<homepage> {
                   height: 45,
                   width: 125,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) => timetable())));
+                    },
                     child: Text('TimeTable',
                         style: GoogleFonts.roboto(
                             color: Colors.black,
@@ -135,7 +161,10 @@ class _homepageState extends State<homepage> {
                   height: 45,
                   width: 125,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: ((context) => chat())));
+                    },
                     child: Text('Chat',
                         style: GoogleFonts.roboto(
                             color: Colors.black,

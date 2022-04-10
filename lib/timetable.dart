@@ -1,15 +1,13 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-class result extends StatefulWidget {
-  result({Key? key}) : super(key: key);
+class timetable extends StatefulWidget {
+  timetable({Key? key}) : super(key: key);
 
   @override
-  State<result> createState() => _resultState();
+  State<timetable> createState() => _timetableState();
 }
 
-class _resultState extends State<result> {
+class _timetableState extends State<timetable> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,14 +23,14 @@ class _resultState extends State<result> {
                       fontWeight: FontWeight.w300))),
           Align(
               alignment: FractionalOffset(0.1, 0.2),
-              child: Text('Result',
+              child: Text('Timetable ',
                   style: GoogleFonts.roboto(
                       color: Colors.black,
                       fontSize: 15,
                       fontWeight: FontWeight.w300))),
           Align(
               alignment: FractionalOffset(0.5, 0.3),
-              child: Text('Upload Result Content ',
+              child: Text('Upload Timetable  Content ',
                   style: GoogleFonts.roboto(
                       color: Colors.black,
                       fontSize: 15,

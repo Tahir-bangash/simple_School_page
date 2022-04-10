@@ -2,14 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-class result extends StatefulWidget {
-  result({Key? key}) : super(key: key);
+
+class chat extends StatefulWidget {
+  chat({Key? key}) : super(key: key);
 
   @override
-  State<result> createState() => _resultState();
+  State<chat> createState() => _chatState();
 }
 
-class _resultState extends State<result> {
+class _chatState extends State<chat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,15 +25,22 @@ class _resultState extends State<result> {
                       fontSize: 15,
                       fontWeight: FontWeight.w300))),
           Align(
-              alignment: FractionalOffset(0.1, 0.2),
-              child: Text('Result',
+              alignment: FractionalOffset(0.6, 0.2),
+              child: Text('To all student',
                   style: GoogleFonts.roboto(
                       color: Colors.black,
                       fontSize: 15,
                       fontWeight: FontWeight.w300))),
           Align(
-              alignment: FractionalOffset(0.5, 0.3),
-              child: Text('Upload Result Content ',
+              alignment: FractionalOffset(0.1, 0.2),
+              child: Text('Chat',
+                  style: GoogleFonts.roboto(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w300))),
+          Align(
+              alignment: FractionalOffset(0.3, 0.3),
+              child: Text('List of student',
                   style: GoogleFonts.roboto(
                       color: Colors.black,
                       fontSize: 15,

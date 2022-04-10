@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+
+import 'first_homescreen.dart';
 
 void main() {
   runApp(const App());
@@ -18,7 +19,7 @@ class _AppState extends State<App> {
       color: Colors.white,
       debugShowCheckedModeBanner: false,
       title: 'Login UI',
-      home: homepage(),
+      home: fistScreen(),
     );
   }
 }
